@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    zoom: 125%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000000; 
+    color: #ffffff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 72px;
+}
+
+
+.left_section {
+    padding-right: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
+    margin-bottom: 30px;
+    margin-left: -100px;
+}
+
+.text_left {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.grad_1 {
+    background: linear-gradient(to right, #f97316, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad_2 {
+    background: linear-gradient(to right, #ec4899, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.image_container {
+    max-width: 450px;
+}
+
+.main_image {
+    width: 100%;
+    height: auto;
+}
+
+
+.right_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    background-color: #000;
+    border-left: 1px solid #262626; 
+}
+
+.login_card {
+    background: #000;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+}
+
+.input_field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #363636;
+    border-radius: 8px;
+    background-color: #121212;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.login_btn {
+    width: 100%;
+    background-color: #00376b; 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login_btn:hover{
+    background-color: #075ce4;
+}
+
+.forgot_password {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    color: #a8a8a8;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #262626;
+    margin: 20px 0;
+}
+
+.create_account_btn {
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    color: #0095f6;
+    border: 1px solid #0095f6;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.create_account_btn:hover{
+    background-color: #075ce4;
+}
+
+.create_account_facebook_btn {
+    margin-top: 15px;
+    display: block;
+    background-color: transparent;
+    color: #0095f6;
+    border: 1px solid #0095f6;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.create_account_facebook_btn:hover{
+    background-color: #075ce4;
+}
+
+.text_footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+.footer {
+    grid-column: span 2;
+    background-color: #000;
+    padding: 40px 0;
+    border-top: 1px solid #262626;
+}
+
+.footer_content {
+    max-width: 980px;
+    margin: 0 auto;
+    color: #8e8e8e;
+    font-size: 12px;
+    text-align: center;
+}
+
+.languages, .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer_content a {
+    text-decoration: none;
+    color: #8e8e8e;
+}
+
+.footer_divider {
+    display: none; 
+}
+
+.footer_text {
+    margin-top: 20px;
+}
+
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr; 
+        padding-top: 20px;
+    }
+
+    .left_section {
+        display: none; 
+    }
+
+    .right_section {
+        border-left: none;
+        width: 100%;
+    }
+
+    .footer {
+        grid-column: span 1;
+    }
+}
