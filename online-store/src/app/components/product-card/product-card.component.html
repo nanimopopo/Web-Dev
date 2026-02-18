@@ -1,0 +1,65 @@
+<article class="card">
+  <a class="imgWrap" [href]="product.link" target="_blank" rel="noopener noreferrer">
+    <img class="mainImg" [src]="product.image" [alt]="product.name" />
+  </a>
+
+  <div class="body">
+    <h3 class="title">
+      <a [href]="product.link" target="_blank" rel="noopener noreferrer">{{ product.name }}</a>
+    </h3>
+
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <div class="price">{{ product.price | number }} ₸</div>
+
+      <div class="rating">
+        <span class="stars">
+          <span
+              *ngFor="let star of getStars(product.rating); let i = index"
+              [class.filled]="star">
+              ★
+          </span>
+        </span>
+
+        <span class="badge">{{ product.rating }}</span>
+      </div>
+    </div>
+
+    <div class="thumbs" *ngIf="product.images?.length">
+      <img class="thumb" *ngFor="let img of product.images.slice(0, 3)" [src]="img" [alt]="product.name"
+      (click)="changeImage(img)" [class.active]="product.image===img"/>
+    </div>
+
+    <div class="actions">
+
+      <a class="iconBtn"
+         [href]="getWhatsAppLink(product)"
+         target="_blank"
+         rel="noopener noreferrer"
+         title="Share on WhatsApp">
+        <img class="icon" src="https://png.pngtree.com/element_our/md/20180506/md_5aeee501bc171.jpg" alt="whatsapp">
+      </a>
+
+      <a
+        class="iconBtn"
+        [href]="getTelegramLink(product)"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Share on Telegram">
+        <img class="icon" src="https://image.similarpng.com/file/similarpng/very-thumbnail/2021/10/Telegram-icon-on-transparent-background-PNG.png" alt="telegram">
+      </a>
+
+
+      <a
+        class="iconBtn"
+        [href]="product.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Open on Kaspi">
+        <img class="icon" src="https://companieslogo.com/img/orig/KKS.F-9d710a31.png?t=1720244492" alt="kaspi">
+      </a>
+    </div>
+
+  </div>
+</article>
