@@ -1,0 +1,17 @@
+<div class="cats">
+  <button
+    *ngFor="let c of categories"
+    (click)="selectCategory(c.id)"
+    [class.active]="c.id === selectedCategoryId"
+  >
+    {{ c.name }}
+  </button>
+</div>
+
+<ng-container *ngIf="selectedCategoryId; else welcome">
+  <app-product-list [products]="selectedProducts"></app-product-list>
+</ng-container>
+
+<ng-template #welcome>
+  <p>Please select a category</p>
+</ng-template>
