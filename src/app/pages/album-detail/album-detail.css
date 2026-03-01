@@ -1,0 +1,21 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 14px;
+  max-width: 650px;
+}
+.label { display: grid; gap: 6px; margin-top: 10px; }
+input { padding: 10px; border-radius: 10px; border: 1px solid #ddd; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+button {
+  padding: 10px 12px; border-radius: 10px;
+  border: 1px solid #222; background: transparent; cursor: pointer;
+}
+button.secondary { border-color: #777; color: #555; }
+a.btn {
+  display: inline-flex; align-items: center;
+  padding: 10px 12px; border-radius: 10px;
+  border: 1px solid #222; text-decoration: none; color: #222;
+}
+.info { margin-top: 10px; }
+.error { margin-top: 10px; color: #b00020; }

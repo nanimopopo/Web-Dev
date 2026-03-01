@@ -1,0 +1,12 @@
+<h1>Albums</h1>
+
+<ul>
+  <li
+    *ngFor="let album of albums$ | async"
+    (click)="openAlbum(album.id)"
+    style="cursor:pointer; margin-bottom:8px; display:flex; justify-content:space-between; gap:12px;"
+  >
+    <span><strong>#{{ album.id }}</strong> — {{ album.title }}</span>
+    <button (click)="deleteAlbum(album.id, $event)">Delete</button>
+  </li>
+</ul>
