@@ -1,0 +1,33 @@
+<article class="card">
+  <a class="imgWrap" [href]="product.link" target="_blank" rel="noopener">
+    <img class="mainImg" [src]="product.image" [alt]="product.name" />
+  </a>
+
+  <div class="body">
+    <h3 class="title">{{ product.name }}</h3>
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <div class="price">{{ product.price | number }} ₸</div>
+
+      <div class="rating">
+        <div class="stars">
+          <span *ngFor="let s of getStars(product.rating)" [class.filled]="s">★</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="thumbs" *ngIf="thumbs.length">
+      <img class="thumb" *ngFor="let img of thumbs.slice(0,3)" [src]="img" alt="" />
+    </div>
+
+    <div class="actions">
+      <button class="pillBtn" type="button" (click)="like()">❤ {{ product.likes }}</button>
+
+      <a class="iconBtn" [href]="getWhatsAppLink()" target="_blank" rel="noopener">WA</a>
+      <a class="iconBtn" [href]="getTelegramLink()" target="_blank" rel="noopener">TG</a>
+
+      <button class="dangerBtn" type="button" (click)="requestDelete()">Delete</button>
+    </div>
+  </div>
+</article>

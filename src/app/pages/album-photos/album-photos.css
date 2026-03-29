@@ -1,0 +1,37 @@
+.grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.tile {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.title {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.back {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  background: transparent;
+  cursor: pointer;
+}
