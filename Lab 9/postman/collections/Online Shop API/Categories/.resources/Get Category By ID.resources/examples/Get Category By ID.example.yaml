@@ -1,0 +1,22 @@
+$kind: http-example
+request:
+  url: http://127.0.0.1:8000/api/categories/1/
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    date: Sun, 05 Apr 2026 11:41:46 GMT
+    server: WSGIServer/0.2 CPython/3.14.0
+    content-type: application/json
+    vary: Accept, Cookie
+    allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+    x-frame-options: DENY
+    content-length: "29"
+    x-content-type-options: nosniff
+    referrer-policy: same-origin
+    cross-origin-opener-policy: same-origin
+  body:
+    type: json
+    content: '{"id":1,"name":"Electronics"}'
+order: 1775389313836
