@@ -1,0 +1,6 @@
+$kind: http-request
+name: Get Products By Category
+url: http://127.0.0.1:8000/api/categories/1/products/
+method: GET
+examples: .resources/Get Products By Category.resources/examples
+order: 3732323772612510
